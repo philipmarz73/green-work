@@ -27,6 +27,7 @@ connection.on("error", (err) => {
     console.log("mongoose connection error: ", err);
 });
 app.use(express.static("client/build"));
+
 app.get("/api/config", (req, res) => {
     res.json({ success: true});
 });
