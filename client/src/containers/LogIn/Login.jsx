@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Login = () => {
+const LogIn = () => {
     return (
         <div className="container">
         <div className="row">    
