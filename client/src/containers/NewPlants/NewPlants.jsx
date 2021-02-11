@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from "axios";
 
 const NewPlants = () => {
+    const [title, setTitle] = useState("");
+    const [type, setType] = useState("");
+    const [sciName, setSciName] = useState("");
+    const [imageURL, setImageURL] = useState("");
+
+    const handleFormSubmit
     return (
         <div className="container">
         <div className="row">    
