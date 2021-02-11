@@ -5,7 +5,7 @@ import Home from "./containers/Home/Home";
 import LogIn from "./containers/LogIn/LogIn";
 import PlantCare from "./containers/PlantCare/PlantCare";
 import SignIn from "./containers/SignIn/SignIn";
-
+import NavBar from "./components/NavBar/NavBar";
 
 
 
