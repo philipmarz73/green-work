@@ -12,9 +12,9 @@ const NewPlants = () => {
         axios
             .post("/api/plants", {
                 title: title,
-                type, type,
-                sciName, sciName,
-                imageURL, imageURL,
+                type: type,
+                sciName: sciName,
+                imageURL: imageURL,
             })
             .then((response) => {
                 console.log(response.data);
@@ -22,7 +22,6 @@ const NewPlants = () => {
             .catch((err) => {
                 console.log(err);
             });
-
     };
     return (
         <div className="container">
@@ -36,7 +35,7 @@ const NewPlants = () => {
       <div class="row">
         <div class="input-field col s6">
           <input placeholder="Placeholder" id="first_name" type="text" class="validate"/>
-          <label for="first_name">First Name</label>
+          <label for="plant_name">Plant Name</label>
         </div>
         <div class="input-field col s6">
           <input id="last_name" type="text" class="validate"/>
@@ -44,12 +43,12 @@ const NewPlants = () => {
         </div>
       </div>
       <div class="row">
-        <div class="input-field col s12">
+        <div class="input-field col s12" onSubmit={handleFormSubmit}></div>
           <input disabled value="I am not editable" id="disabled" type="text" class="validate"/>
           <label for="disabled">Disabled</label>
         </div>
-      </div>
-      <div class="row">
+      {/* </div> */}
+    <div class="row">
         <div class="input-field col s12">
           <input id="password" type="password" class="validate"/>
           <label for="password">Password</label>
