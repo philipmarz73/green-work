@@ -3,6 +3,7 @@ import About from "./containers/About/About";
 import Contact from "./containers/Contact/Contact";
 import Home from "./containers/Home/Home";
 import LogIn from "./containers/LogIn/LogIn";
+import NewPlants from "./containers/NewPlants/NewPlants";
 import PlantCare from "./containers/PlantCare/PlantCare";
 import SignIn from "./containers/SignIn/SignIn";
 import NavBar from "./components/NavBar/NavBar";
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/about" component={About}/>
           <Route exact path="/contact" component={Contact}/>
           <Route exact path="/logIn" component={LogIn}/>
+          <Route exact path="/newPlants" component={NewPlants}/>
           <Route exact path="/plantCare" component={PlantCare}/>
           <Route exact path="/signIn" component={SignIn}/>
 

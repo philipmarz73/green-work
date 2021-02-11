@@ -31,7 +31,13 @@ const NavBar = () => {
               Log In
               </NavLink>
           </li>
-      
+          <li>
+      <NavLink to="/newPlants" 
+          activeStyle={{backgroundColor: "rgb(254, 247, 224)"}}
+          >
+              New Plants
+              </NavLink>
+          </li>
     </ul>
   </div>
 </nav>
