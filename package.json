@@ -1,5 +1,5 @@
 {
-  "name": "greenwork",
+  "name": "green-work",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -15,15 +15,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/philipmarz73/greenwork.git"
+    "url": "git+https://github.com/philipmarz73/green-work.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/philipmarz73/greenwork/issues"
+    "url": "https://github.com/philipmarz73/green-work/issues"
   },
-  "homepage": "https://github.com/philipmarz73/greenwork#readme",
+  "homepage": "https://github.com/philipmarz73/green-work#readme",
   "dependencies": {
     "express": "^4.17.1",
     "if-env": "^1.0.4",
