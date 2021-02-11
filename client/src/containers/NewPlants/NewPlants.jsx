@@ -7,7 +7,23 @@ const NewPlants = () => {
     const [sciName, setSciName] = useState("");
     const [imageURL, setImageURL] = useState("");
 
-    const handleFormSubmit
+    const handleFormSubmit = (e) => {
+        e.preventDefault();
+        axios
+            .post("/api/plants", {
+                title: title,
+                type, type,
+                sciName, sciName,
+                imageURL, imageURL,
+            })
+            .then((response) => {
+                console.log(response.data);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+
+    };
     return (
         <div className="container">
         <div className="row">    
