@@ -7,17 +7,20 @@ const NewPlants = () => {
     const [plantType, setplantType] = useState("");
     const [sciName, setSciName] = useState("");
     const [imageURL, setImageURL] = useState("");
-    const [maxHeight, setMaxHeight]
+    const [maxHeight, setMaxHeight] = useState("");
+    const [added, setAdded] = useState(false);
+    
     const handleFormSubmit = (e) => {
         e.preventDefault();
         axios
-            .post("/api/plants", {
+            .post("/api/newPlants", {
                 imageURL: imageURL,
                 title: title,
                 sciName: sciName,
                 type: plantType,
-                maxHeight: maxHeight 
-                
+                maxHeight: maxHeight, 
+                added: added,
+
 
             })
             .then((response) => {
