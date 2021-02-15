@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const app = express();
 const path = require("path");
 const PORT = process.env.PORT || 3001;
-app.use(express.urlencoded({extended: true }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 
@@ -27,11 +27,16 @@ connection.on("connected", () =>{
 connection.on("error", (err) => {
     console.log("mongoose connection error: ", err);
 });
+
+const PlantAskController = require("./controllers/plantAskController");
+
 app.use(express.static("client/build"));
 
 app.get("/api/config", (req, res) => {
     res.json({ success: true});
 });
+
+app.use("/api/plantAsk", PlantAskController);
 
 app.get("*",(req, res) => {
     res.sendFile(path.join(__dirname, "client/build/index.html"));

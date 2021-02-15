@@ -4,18 +4,21 @@ import NewPlantForm from "../../components/NewPlantForm/NewPlantForm";
 
 const NewPlants = () => {
     const [title, setTitle] = useState("");
-    const [type, setType] = useState("");
+    const [plantType, setplantType] = useState("");
     const [sciName, setSciName] = useState("");
     const [imageURL, setImageURL] = useState("");
-
+    const [maxHeight, setMaxHeight]
     const handleFormSubmit = (e) => {
         e.preventDefault();
         axios
             .post("/api/plants", {
-                title: title,
-                type: type,
-                sciName: sciName,
                 imageURL: imageURL,
+                title: title,
+                sciName: sciName,
+                type: plantType,
+                maxHeight: maxHeight 
+                
+
             })
             .then((response) => {
                 console.log(response.data);
@@ -28,7 +31,7 @@ const NewPlants = () => {
         <div className="container">
         <div className="row">    
         <div className="col">
-        <h1 className="center-align">Add New Plants</h1>
+        <h1 className="center-align">Learn About New Plants</h1>
             </div> 
         </div>
         <div className= "row">

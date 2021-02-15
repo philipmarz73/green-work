@@ -4,7 +4,7 @@ import Contact from "./containers/Contact/Contact";
 import Home from "./containers/Home/Home";
 import LogIn from "./containers/LogIn/LogIn";
 import NewPlants from "./containers/NewPlants/NewPlants";
-import PlantCare from "./containers/PlantCare/PlantCare";
+import MyGarden from "./containers/MyGarden/MyGarden";
 import SignIn from "./containers/SignIn/SignIn";
 import NavBar from "./components/NavBar/NavBar";
 
@@ -21,7 +21,7 @@ function App() {
           <Route exact path="/contact" component={Contact}/>
           <Route exact path="/logIn" component={LogIn}/>
           <Route exact path="/newPlants" component={NewPlants}/>
-          <Route exact path="/plantCare" component={PlantCare}/>
+          <Route exact path="/myGarden" component={MyGarden}/>
           <Route exact path="/signIn" component={SignIn}/>
 
 
