@@ -2,7 +2,9 @@ const express = require("express");
 const router = express.Router();
 const PlantAsk = require("../models/plantAsk");
 
-router.get("/", (req, res) => {
+// router.get("/", (req, res) => {
+
+router.get("/api/plantAsk", (req, res) => {
 PlantAsk.find()
     .then((plants) => {
         res.json(plants);
@@ -13,7 +15,7 @@ PlantAsk.find()
     });
 
 });
-router.post("/", (req, res) => {
+router.post("/api/plantAsk", (req, res) => {
     console.log(req.body);
     PlantAsk.create(req.body).then((newPlant) => {
         console.log(newPlant);

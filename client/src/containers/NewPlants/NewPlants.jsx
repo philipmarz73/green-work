@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from "axios";
-import NewPlantForm from "../../components/NewPlantForm/NewPlantForm";
+import GardenTable from "../../components/GardenTable/GardenTable";
 
 const NewPlants = () => {
     const [title, setTitle] = useState("");
@@ -13,7 +13,7 @@ const NewPlants = () => {
     const handleFormSubmit = (e) => {
         e.preventDefault();
         axios
-            .post("/api/newPlants", {
+            .post("/api/plantAsk", {
                 imageURL: imageURL,
                 title: title,
                 sciName: sciName,
@@ -31,17 +31,54 @@ const NewPlants = () => {
             });
     };
     return (
+
         <div className="container">
         <div className="row">    
         <div className="col">
         <h1 className="center-align">Learn About New Plants</h1>
             </div> 
         </div>
-        <div className= "row">
-          <NewPlantForm handleFormSubmit={handleFormSubmit} />
+
+  <div className="row">
+    <form className="col s12">
+      <div className="row">
+        <div className="input-field col s6">
+          <input placeholder="Plant Name" id="title" type="text"/>
+          <label htmlFor="title">Plant Name</label>
         </div>
-       </div>
+        <div className="input-field col s6">
+          <input placeholder="PLant Name" id="title" type="text"/>
+          <label htmlfor="title">Plant Name</label>
+        </div>
+      </div>
+      <div className="input-field col s6">
+          <input placeholder="Plant Name" id="title" type="text"/>
+          <label htmlFor="title">Plant Name</label>
+        </div>
+        <div className="input-field col s6">
+          <input placeholder="PLant Name" id="title" type="text"/>
+          <label htmlfor="title">Plant Name</label>
+        </div>
+        <div className="row">
+            <div className="col s12">
+                <button className="waves-effect waves-light btn">
+                    Find These Plants
+                </button>
+            </div>
+        </div>
+      </form>
+    </div>
+        
+      
+  
+        
     );
-};
+  
+        
+    <GardenTable handleFormSubmit={handleFormSubmit}  
+       
+       
+        
+      
 
 export default NewPlants;

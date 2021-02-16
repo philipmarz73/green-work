@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const NewPlants = () => {
+const NewPlants = ({handleFormSubmit}) => {
     const [title, setTitle] = useState("");
     const [plantType, setplantType] = useState("");
     const [sciName, setSciName] = useState("");
@@ -8,10 +8,9 @@ const NewPlants = () => {
     const [maxHeight, setMaxHeight] = useState("");
     const [added, setAdded] = useState(false);
 
+
+    // return 
+
+
+
     
-    return (
-
-
-
-    );
- };
