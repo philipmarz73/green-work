@@ -18,7 +18,7 @@ const NewPlants = () => {
                 title: title,
                 sciName: sciName,
                 type: plantType,
-                sunTolerance: sunTolerance
+                // sunTolerance: sunTolerance,
                 maxHeight: maxHeight,
 
 
@@ -30,6 +30,7 @@ const NewPlants = () => {
                 console.log(err);
             });
     };
+    
     return (
 
         <div className="container">
@@ -39,47 +40,7 @@ const NewPlants = () => {
             </div> 
         </div>
         
-        <h2 className="center-align">Plants that Thrive in Your Growing Zone</h2>
-            </div> 
-        </div>
-
-    <table>
-        <thead>
-          <tr>
-              <th>Image</th>
-              <th>Name</th>
-              <th>SciName</th>
-              <th>Plant Type</th>
-              <th>Sun Tolerance</th>
-              <th>Max Height</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
-          </tr>
-          <tr>
-            <td>Alan</td>
-            <td>Jellybean</td>
-            <td>$3.76</td>
-          </tr>
-          <tr>
-            <td>Jonathan</td>
-            <td>Lollipop</td>
-            <td>$7.00</td>
-          </tr>
-        </tbody>
-      </table>
-
-
-
-
-  <div className="container">
-  <div className="row">    
-  <div className="col"></div>
+  
   <div className="row">
     <form className="col s12"> onSubmit={handleFormSubmit}>
       <div className="row">
@@ -118,7 +79,7 @@ const NewPlants = () => {
       </form>
     </div>
    </div>     
-   </div>
+   
       
     );
         
