@@ -13,4 +13,4 @@ const NewPlants = ({handleFormSubmit}) => {
 
 
 
-    
+}
