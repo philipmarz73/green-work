@@ -17,11 +17,10 @@ const MyGarden = () => {
               <th>Image</th>
               <th>Type</th>
               <th>Scientific Name</th>
-              <th>Item Name</th>
-              <th>Item Price</th>
-              <th>Name</th>
-              <th>Item Name</th>
-              <th>Item Price</th>
+              <th>Moisture Tolerance</th>
+              <th>Sun Tolerance</th>
+              <th>Max Height</th>
+              <th>Delete</th>
           </tr>
         </thead>
 

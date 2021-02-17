@@ -26,7 +26,7 @@ const plantSchema = new Schema({
       moisture: {
         type: String,
         trim: true,
-        required: "Enter Moisture tolerance",
+        required: "Enter Moisture Tolerance",
       },
       sunTolerance: {
         type: String,
@@ -36,7 +36,7 @@ const plantSchema = new Schema({
       maxHeight: {
         type: String,
         trim: true,
-        required: "Enter Sun Tolerance",
+        required: "Enter Max Height",
       },
     });
     
