@@ -38,6 +38,34 @@ const NavBar = () => {
               New Plants
               </NavLink>
           </li>
+          <li>
+      <NavLink to="/addToGarden" 
+          activeStyle={{backgroundColor: "rgb(254, 247, 224)"}}
+          >
+              Add Plants
+              </NavLink>
+          </li>
+          <li>
+      <NavLink to="/startGarden" 
+          activeStyle={{backgroundColor: "rgb(254, 247, 224)"}}
+          >
+              Start Your Garden
+              </NavLink>
+          </li>
+          <li>
+      <NavLink to="/myGarden" 
+          activeStyle={{backgroundColor: "rgb(254, 247, 224)"}}
+          >
+              My Garden
+              </NavLink>
+          </li>
+          <li>
+      <NavLink to="/signIn" 
+          activeStyle={{backgroundColor: "rgb(254, 247, 224)"}}
+          >
+              Sign In
+              </NavLink>
+          </li>
     </ul>
   </div>
 </nav>
