@@ -4,7 +4,9 @@ const MyGarden = () => {
 
 
   const [plants, setPlants] = useState([]);
-    axios.get("")
+    axios.get("/api/plant").then(response => {
+      console.log(response.data);
+    })
   useEffect(() => {
 
   }, [])

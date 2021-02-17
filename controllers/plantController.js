@@ -4,7 +4,7 @@ const PlantAsk = require("../models/plant");
 
 // router.get("/", (req, res) => {
 
-router.get("/api/plantAsk", (req, res) => {
+router.get("/api/plant", (req, res) => {
 PlantAsk.find()
     .then((plants) => {
         res.json(plants);
@@ -15,7 +15,7 @@ PlantAsk.find()
     });
 
 });
-router.post("/api/plantAsk", (req, res) => {
+router.post("/api/plant", (req, res) => {
     console.log(req.body);
     PlantAsk.create(req.body).then((newPlant) => {
         console.log(newPlant);
