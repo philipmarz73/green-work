@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const PlantAsk = require("../models/plantAsk");
+const PlantAsk = require("../models/plant");
 
 // router.get("/", (req, res) => {
 

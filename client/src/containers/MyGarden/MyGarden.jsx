@@ -1,6 +1,14 @@
-import React from 'react';
-
+import React, {useEffect, useState} from 'react';
+import axios from "axios";
 const MyGarden = () => {
+
+
+  const [plants, setPlants] = useState([]);
+    axios.get("")
+  useEffect(() => {
+
+  }, [])
+
     return (
              <div className="container">
         <div className="row">    
@@ -25,42 +33,37 @@ const MyGarden = () => {
         </thead>
 
         <tbody>
-          <tr>
-            <td>Lily</td>
-            <td>PLACEHOLD</td>
-            <td>Flower/bulb</td>
-            <td>Lily Lileus</td>
-            <td>moderate </td>
-            <td>Full Sun</td>
-            <td>30</td>
+          {plants.map(
+            ({
+              title,
+              imageURL,
+              plantType,
+              sciName,
+              moisture,
+              sunTolerance,
+              maxHeight,
+            }) => (
+              <tr>
+            <td>title</td>
+            <td>imageURL</td>
+            <td>plantType</td>
+            <td>sciName</td>
+            <td>moisture</td>
+            <td>sunTolerance</td>
+            <td>maxHeight</td>
             <td>Checkbox?</td>
           </tr>
-          <tr>
-          <td>Lily</td>
-            <td>PLACEHOLD</td>
-            <td>Flower/bulb</td>
-            <td>Lily Lileus</td>
-            <td>moderate </td>
-            <td>Full Sun</td>
-            <td>30</td>
-            <td>Checkbox?</td>
-          </tr>
-          <tr>
-            <td>Jonathan</td>
-            <td>Lollipop</td>
-            <td>$7.00</td>
-          </tr>
+          
+          ))}
         </tbody>
       </table>
             
 
 
                </div>
-               
-               
-               </div> 
+            </div> 
         </div>
     );
 };
 
-export default PlantCare;
+export default MyGarden;
