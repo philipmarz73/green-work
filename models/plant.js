@@ -34,9 +34,9 @@ const plantSchema = new Schema({
         required: "Enter Sun Tolerance",
       },
       maxHeight: {
-        type: String,
+        type: Number,
         trim: true,
-        required: "Enter Max Height",
+        required: "Enter Max Height (in.)",
       },
     });
     

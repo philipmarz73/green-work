@@ -26,14 +26,24 @@ const MyGarden = () => {
 
         <tbody>
           <tr>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
+            <td>Lily</td>
+            <td>PLACEHOLD</td>
+            <td>Flower/bulb</td>
+            <td>Lily Lileus</td>
+            <td>moderate </td>
+            <td>Full Sun</td>
+            <td>30</td>
+            <td>Checkbox?</td>
           </tr>
           <tr>
-            <td>Alan</td>
-            <td>Jellybean</td>
-            <td>$3.76</td>
+          <td>Lily</td>
+            <td>PLACEHOLD</td>
+            <td>Flower/bulb</td>
+            <td>Lily Lileus</td>
+            <td>moderate </td>
+            <td>Full Sun</td>
+            <td>30</td>
+            <td>Checkbox?</td>
           </tr>
           <tr>
             <td>Jonathan</td>
