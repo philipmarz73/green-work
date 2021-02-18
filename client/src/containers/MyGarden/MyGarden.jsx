@@ -4,12 +4,18 @@ const MyGarden = () => {
 
 
   const [plants, setPlants] = useState([]);
-    axios.get("/api/plant").then(response => {
-      console.log(response.data);
-    })
+    
   useEffect(() => {
-
-  }, [])
+    axios
+    .get("/api/plant")
+    .then((response) => {
+      console.log(response.data);
+      setPlants(response.data);
+    })
+    .catch((err => {
+      console.log(err);
+    }),
+  }, []);
 
     return (
              <div className="container">
@@ -37,6 +43,7 @@ const MyGarden = () => {
         <tbody>
           {plants.map(
             ({
+              _id,
               title,
               imageURL,
               plantType,
@@ -45,26 +52,23 @@ const MyGarden = () => {
               sunTolerance,
               maxHeight,
             }) => (
-              <tr>
-            <td>title</td>
-            <td>imageURL</td>
-            <td>plantType</td>
-            <td>sciName</td>
-            <td>moisture</td>
-            <td>sunTolerance</td>
-            <td>maxHeight</td>
+            <tr key={_id}>
+            <td>{title}</td>
+            <td><img src={imageURL} alt={plant} style={{height: "4em"}}></img></td>
+            <td>{plantType}</td>
+            <td>{sciName}</td>
+            <td>{moisture}</td>
+            <td>{sunTolerance}</td>
+            <td>{maxHeight}</td>
             <td>Checkbox?</td>
           </tr>
-          
-          ))}
+            )
+          )}
         </tbody>
       </table>
-            
-
-
-               </div>
-            </div> 
-        </div>
+    </div>
+  </div> 
+</div>
     );
 };
 

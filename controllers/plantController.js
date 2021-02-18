@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const PlantAsk = require("../models/plant");
+const Plant = require("../models/plant");
 
 // router.get("/", (req, res) => {
 
-router.get("/api/plant", (req, res) => {
-PlantAsk.find()
+router.get("/", (req, res) => {
+Plant.find()
     .then((plants) => {
         res.json(plants);
     })
@@ -15,7 +15,7 @@ PlantAsk.find()
     });
 
 });
-router.post("/api/plant", (req, res) => {
+router.post("/", (req, res) => {
     console.log(req.body);
     PlantAsk.create(req.body).then((newPlant) => {
         console.log(newPlant);
@@ -24,4 +24,11 @@ router.post("/api/plant", (req, res) => {
     });
 
 });
+
+router.delete("/:id", (req, res) => {
+    Plant.findByIdAndDelete(req.params.id).then((result) => {
+      res.json(result);  
+    });
+});
+
 module.exports = router;
