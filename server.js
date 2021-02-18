@@ -28,15 +28,16 @@ connection.on("error", (err) => {
     console.log("mongoose connection error: ", err);
 });
 
-const PlantAskController = require("./controllers/plantAskController");
-
+const PlantController = require("./controllers/plantController");
+const userController = require("./controllers/userController");
 app.use(express.static("client/build"));
 
 app.get("/api/config", (req, res) => {
     res.json({ success: true});
 });
 
-app.use("/api/plantAsk", PlantAskController);
+app.use("/api/plant", PlantController);
+app.use("/api/user", userController);
 
 app.get("*",(req, res) => {
     res.sendFile(path.join(__dirname, "client/build/index.html"));
